@@ -4,14 +4,12 @@ public class Person {
     private String LastName;
     private int PhoneNumber;
     private String status;
-    private Message DisplayPicture;
     private Person(PersonBuilder builder){
         this.DisplayName = builder.DisplayName;
         this.FirstName = builder.FirstName;
         this.LastName = builder.LastName;
         this.PhoneNumber = builder.PhoneNumber;
         this.status = builder.status;
-        this.DisplayPicture = builder.DisplayPicture;
     }
     public static class PersonBuilder{
         private String DisplayName;
