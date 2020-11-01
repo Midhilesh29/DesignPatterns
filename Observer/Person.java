@@ -5,6 +5,7 @@ public class Person implements Member{
     private int PhoneNumber;
     private String status;
     private State state;
+    private ArrayList<Group> groups;
     private Person(PersonBuilder builder){
         this.DisplayName = builder.DisplayName;
         this.FirstName = builder.FirstName;
@@ -19,6 +20,10 @@ public class Person implements Member{
     @Override
     public Message getMessage(){
         return this.state.dequeue();
+    }
+    @Override
+    public Message addMessage(Group g1, Message m1){
+        g1.addMessage(m1);
     }
     public static class PersonBuilder{
         private String DisplayName;
