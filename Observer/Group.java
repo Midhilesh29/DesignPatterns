@@ -1,5 +1,5 @@
 interface Group{
-	public void update();
+	public void notify(Message);
 	public Message getMessage();
-	public void addMessage();
+	public void addMessage(Message);
 }
